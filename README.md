@@ -8,7 +8,7 @@ CentOS/Ubuntu 系统的 nginx php-fpm 运行环境搭建。
 
 # 目录
 -----
-1. [准备工作](#initialize)
+1. [准备工作](#准备工作)
    * [CentOS](#init-centos)
    * [Ubuntu](#init-ubuntu)
 2. [配置环境](#configuring)
