@@ -43,4 +43,23 @@ rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-5.rpm
 ~~~
 
 
+## nginx php-fpm 监控
+~~~
+location /status {
+    #auth_basic "Password please";
+    #auth_basic_user_file http_auth;
+    allow 127.0.0.1;    
 
+    stub_status on; 
+    access_log   off;
+      }   
+
+location ~ ^/(php_status|php_ping)$ {
+#location /php_status {
+    include fastcgi_params;
+    fastcgi_pass 127.0.0.1:9000;
+    fastcgi_param SCRIPT_FILENAME $fastcgi_script_name;
+
+    access_log   off;
+}   
+~~~
