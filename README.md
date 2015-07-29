@@ -52,10 +52,9 @@ location /status {
 
     stub_status on; 
     access_log   off;
-      }   
+}   
 
 location ~ ^/(php_status|php_ping)$ {
-#location /php_status {
     include fastcgi_params;
     fastcgi_pass 127.0.0.1:9000;
     fastcgi_param SCRIPT_FILENAME $fastcgi_script_name;
